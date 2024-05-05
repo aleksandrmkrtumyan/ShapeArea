@@ -1,0 +1,22 @@
+﻿Таблица Products
+   - ProductId
+   - ProductName
+
+
+Таблица Categories
+   - CategoryId
+   - CategoryName
+
+ Таблица ProductCategories
+   - ProductId
+   - CategoryId
+
+SELECT 
+    p.ProductName, 
+    c.CategoryName
+FROM 
+    Products p
+LEFT JOIN 
+    ProductCategories pc ON p.ProductId = pc.ProductId
+LEFT JOIN 
+    Categories c ON pc.CategoryId = c.CategoryId
